@@ -65,7 +65,7 @@ router.get('/',function(req,res){
             res.send(err);
         }
         else{
-            res.send(JSON.stringify(filterPitches(pitches)));
+            res.json(filterPitches(pitches));
         }
     })
 })
@@ -76,7 +76,7 @@ router.get('/:pitchId', validatePitchId,function(req,res){
             res.send(err);
         }
         else{
-            res.send(JSON.stringify(filterPitch(pitch)));
+            res.json(filterPitch(pitch));
         }
     })
 })
